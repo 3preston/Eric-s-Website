@@ -8,9 +8,22 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   chosenSegment = 'web3';
-  lightMode = false;
+  now: Date = new Date();
+  day = true;
 
-  constructor() {}
+  constructor() {
+    setInterval(() => {
+      this.now = new Date();
+      if (this.now.getHours() > 6) {
+        this.day = true;
+      } else if (this.now.getHours() > 21) {
+        this.day = false;
+      } else {
+        this.day = false;
+      }
+      console.log(this.day);
+    }, 1);
+  }
 
   segmentChange(chosenSegment: any) {
     this.chosenSegment = chosenSegment.detail.value;
