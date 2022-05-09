@@ -8,21 +8,17 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   chosenSegment = 'web3';
-  now: Date = new Date();
   day = true;
 
   constructor() {
-    setInterval(() => {
-      this.now = new Date();
-      if (this.now.getHours() > 6) {
-        this.day = true;
-      } else if (this.now.getHours() > 21) {
-        this.day = false;
-      } else {
-        this.day = false;
-      }
-      console.log(this.day);
-    }, 1);
+    const now = new Date();
+    if (now.getHours() > 6) {
+      this.day = true;
+    } else if (now.getHours() > 21) {
+      this.day = false;
+    } else {
+      this.day = false;
+    }
   }
 
   segmentChange(chosenSegment: any) {
