@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   chosenSegment = 'web3';
+  lightMode = false;
 
   constructor() {}
 

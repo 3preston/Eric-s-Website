@@ -10,7 +10,7 @@
       <ion-col>
         <ion-row class="ion-justify-content-end ion-align-items-center">
           <h5 class="padRight">Dark</h5>
-          <ion-toggle></ion-toggle>  
+          <ion-toggle [(ngModel)]="lightMode"></ion-toggle>
           <h5 class="padLeft padRight">Light</h5>
         </ion-row>
       </ion-col>
@@ -89,13 +89,14 @@
               fairmint.com
             </a>
           </h1>
-          <h3 class="bold">
-            Invest at
+          <h4 class="bold">
+            Invest at - 
             <a href="https://www.invest.fairmint.com">
               invest.fairmint.com
             </a>
-          </h3>
-          <h5 class="underline">web3 fundraising & community capital powered by:</h5>
+          </h4>
+          <br>
+          <h4 class="underline">web3 fundraising & community capital powered by:</h4>
           <ion-card>
             <ion-card-header class="ion-text-start">
               <a href="www.fairmint.com">
