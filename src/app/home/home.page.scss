@@ -34,3 +34,28 @@
   width: 25px;
   height: 25px;
 }
+
+.fairmint {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+ion-card {
+  max-width: 760px !important;
+  border-radius: 23px 23px 23px 23px;
+}
+
+h3 {
+  display: inline;
+}
