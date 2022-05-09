@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  chosenSegment = 'web3';
+
   constructor() {}
+
+  segmentChange(chosenSegment: any) {
+    this.chosenSegment = chosenSegment.detail.value;
+  }
 
 }
