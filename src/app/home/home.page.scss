@@ -52,6 +52,8 @@
 
 .underline {
   text-decoration: underline;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 ion-card {
@@ -73,8 +75,4 @@ ion-toggle {
   --background-checked: #737373;
   --handle-background: var(--ion-color-dark);
   --handle-background-checked: var(--ion-color-light);
-}
-
-.emoji {
-  font-size: 33px;
 }
