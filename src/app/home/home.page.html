@@ -1,15 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-row class="ion-align-items-center">
-      <!-- <ion-col> -->
-      <!-- </ion-col> -->
-      <!-- <ion-col>
-        <ion-row class="ion-justify-content-end ion-align-items-center">
-          <h5 class="padRight">Dark</h5>
-          <ion-toggle [(ngModel)]="lightMode"></ion-toggle>
-          <h5 class="padLeft padRight">Light</h5>
-        </ion-row>
-      </ion-col> -->
+      <h1>{{crypto}}</h1>
     </ion-row>
   </ion-toolbar>
 </ion-header>
@@ -28,8 +20,11 @@
           <ion-img src="assets/nft.jpg"></ion-img>
         </ion-avatar>
       </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <h1>Eric Preston</h1>
+      <ion-row class="ion-justify-content-center noPadBottom">
+          <h1 class="noPadBottom">Eric Preston</h1>
+      </ion-row>
+      <ion-row class="ion-justify-content-center noPadBottom">
+        <h4 class="noPadBottom">(ericpreston.eth)</h4>
       </ion-row>
       <ion-row class="ion-justify-content-center ion-align-items-center">
         <h5 class="padRight">Head of Compliance</h5>
@@ -161,13 +156,12 @@
       </ion-row>
       <ion-row *ngIf="chosenSegment === 'tech'">
         <ion-col size="12" size-sm="8" offset-sm="2">
-          <ion-row class="ion-justify-content-center">
+          <ion-row class="ion-justify-content-center ion-align-items-center">
             <a href="https://www.github.com/3preston">
               <ion-avatar>
                 <ion-img src="assets/github.png"></ion-img>
               </ion-avatar>
             </a>
-            <h1 class="padLeft"> - </h1>
             <a href="https://www.github.com/3preston">
               <h1 class="padLeft">Eric's Github</h1>
             </a>
@@ -199,11 +193,14 @@
           <ion-row class="ion-text-center">
             <h1>Favorite technologies = Typescript & Javascript, Python, Solidity, Angular, Ionic, Capacitor, Firebase, Algolia, HTML, SCSS</h1>
           </ion-row>
+          <br>
+          <br>
+          <br>
         </ion-col>
       </ion-row>
       <ion-row *ngIf="chosenSegment === 'twitter'">
         <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
-          <ion-button (click)="follow()">Follow @ericprestonETH</ion-button>
+          <ion-button mode="ios" (click)="follow()">Follow @ericprestonETH</ion-button>
           <br>
           <br>
           <ngx-twitter-timeline
