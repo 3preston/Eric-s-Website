@@ -197,13 +197,21 @@
           <br>
           <br>
           <ion-row class="ion-text-center">
-            <h1>Favorite technologies = Typescript & Javascript, Python, Solidity, Angular, Ionic, Firebase, Algolia, HTML, SCSS</h1>
+            <h1>Favorite technologies = Typescript & Javascript, Python, Solidity, Angular, Ionic, Capacitor, Firebase, Algolia, HTML, SCSS</h1>
           </ion-row>
         </ion-col>
       </ion-row>
       <ion-row *ngIf="chosenSegment === 'twitter'">
         <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
-          <a class="twitter-timeline" href="https://twitter.com/ericprestonETH?ref_src=twsrc%5Etfw">Tweets by ericprestonETH</a>
+          <ion-button (click)="follow()">Follow @ericprestonETH</ion-button>
+          <br>
+          <br>
+          <ngx-twitter-timeline
+            style="width: 250px;"
+            [source]="{sourceType: 'profile', screenName: 'ericprestonETH'}"
+            [options]="{height: '4000'}" (onLoad)="onLoad($event)">
+          </ngx-twitter-timeline>
+          <br>
         </ion-col>
       </ion-row>
     </ion-col>
