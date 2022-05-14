@@ -14,6 +14,8 @@ export class HomePage {
   // day = true;
 
   constructor() {
+    const provider = new ethers.providers.JsonRpcProvider();
+    const signer = provider.getSigner();
     // this.getCrypto();
     // const now = new Date();
     // if (now.getHours() > 6) {
