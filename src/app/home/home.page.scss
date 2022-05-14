@@ -54,6 +54,7 @@
   text-decoration: underline;
   padding-left: 10px;
   padding-right: 10px;
+  color: var(--ion-color-success);
 }
 
 ion-card {
@@ -75,4 +76,17 @@ ion-toggle {
   --background-checked: #737373;
   --handle-background: var(--ion-color-dark);
   --handle-background-checked: var(--ion-color-light);
+}
+
+ion-segment {
+  --background: var(--ion-color-light);
+}
+
+ion-segment-button {
+  --color: var(--ion-color-dark);
+  --color-checked: var(--ion-color-success);
+}
+
+.italics {
+  font-style: italic;
 }
