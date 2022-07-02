@@ -24,12 +24,12 @@
           <h1 class="noPadBottom">Eric Preston</h1>
       </ion-row>
       <ion-row class="ion-justify-content-center noPadBottom">
-        <h4 class="noPadBottom">(ericpreston.eth)</h4>
+        <h5 class="noPadBottom">(ericpreston.eth)</h5>
       </ion-row>
-      <ion-row class="ion-justify-content-center ion-align-items-center">
-        <h5 class="padRight">Head of Compliance</h5>
+      <ion-row class="ion-justify-content-center ion-align-items-center ion-text-center">
+        <h3 class="padRight">Head of Compliance</h3>
         <a href="https://www.fairmint.com">
-          <h5 class="padRight">@Fairmint</h5>
+          <h3 class="padRight">@Fairmint</h3>
         </a>
         <a href="https://www.fairmint.com">
           <ion-img class="social" src="assets/fairmint.png"></ion-img>
@@ -37,27 +37,27 @@
       </ion-row>
       <ion-row class="ion-justify-content-center ion-align-items-center">
         <a href="https://twitter.com/ericprestonETH" class="padRight">
-          <ion-img class="social" src="assets/twitter.png"></ion-img>
+          <ion-img class="social padRight" src="assets/twitter.png"></ion-img>
         </a>
         <a href="https://github.com/3preston" class="padRight">
-          <ion-img class="social" src="assets/github.png"></ion-img>
+          <ion-img class="social padRight" src="assets/github.png"></ion-img>
         </a>
         <a href="https://www.linkedin.com/in/ericpreston37/" class="padRight">
           <ion-img class="social" src="assets/linkedin.png"></ion-img>
         </a>
       </ion-row>
       <ion-row>
-        <ion-col size="10" offset="1" size-sm="8" offset-sm="2" class="ion-text-center">
-          <h6>
-            Hello, my name is Eric Preston. 
+        <ion-col size="10" offset="1" size-lg="6" offset-lg="3" class="ion-text-center">
+          <h2>
+            My name is Eric Preston. 
             I am a finance nerd and self-taught shadowy super coder. 
             I have 3 degrees including Juris Doctor and Master of Business Administration. 
             I live in Michigan, and am obssessed with emojis 👟 🖼 🏈 🏒 ⛳️ 🧘🏼‍♂️ 🚴🏻‍♂️ 🏎 ⛵️ 📈 🪙 👨🏼‍💻 🚀
-          </h6>
+          </h2>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="12" size-sm="8" offset-sm="2">
+        <ion-col size="12" size-xl="8" offset-xl="2">
           <ion-segment mode="ios" value="web3" (ionChange)="segmentChange($event)">
             <ion-segment-button value="web3">
               <ion-label>🚀 web3</ion-label>
@@ -76,43 +76,69 @@
       </ion-row>
       <br>
       <ion-row *ngIf="chosenSegment === 'web3'">
-        <ion-col size="12" size-sm="8" offset-sm="2" class="ion-text-center">
+        <ion-col size="12" size-xl="8" offset-xl="2" class="ion-text-center">
           <a href="https://www.fairmint.com">
             <ion-img class="fairmint2" src="assets/fairmint.jpg"></ion-img>
           </a>
           <h1 class="bold">
-            Fairmint, Inc - 
             <a href="https://www.fairmint.com">
-              fairmint.com
+              www.fairmint.com
             </a>
           </h1>
-          <h4 class="bold">
-            Invest at - 
-            <a href="https://www.invest.fairmint.com">
-              invest.fairmint.com
-            </a>
-          </h4>
-          <h4 class="underline">Web3 Fundraising & Community Equity:</h4>
+          <ion-row class="ion-justify-content-center">
+            <h5 class="bold">
+              (Invest at - 
+              <a href="https://www.invest.fairmint.com">
+                invest.fairmint.com
+              </a>
+              )
+            </h5>
+          </ion-row>
+          <br>
+          <h4 class="underline bold">Web3 Fundraising & Community Equity:</h4>
+          <br>
           <ion-card>
             <ion-card-header class="ion-text-start">
-              <a href="https://www.fairmint.com">
-                <h3>Web3 Shares</h3>
+              <a href="https://www.fairmint.com/legal">
+                <h3>Community Shares</h3>
               </a>
               <h3>
-                - ERC-20 tokenized equity
+                - tokenized equity securities
               </h3>
-              <h3 class="italics"> (liquidity pool option) </h3>
+              <h3 class="italics"> (liquidity pool) </h3>
             </ion-card-header>
           </ion-card>
           <ion-card>
             <ion-card-header class="ion-text-start">
-              <a href="https://www.fairmint.com">
-                <h3>Web3 Safe</h3>
+              <a href="https://www.fairmint.com/legal">
+                <h3>Community Safe</h3>
               </a>
               <h3>
                 - tokenized safe post w/ cap
               </h3>
-              <h3 class="italics"> (liquidity pool option) </h3>
+              <h3 class="italics"> (liquidity pool) </h3>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <ion-card-header class="ion-text-start">
+              <a href="https://www.fairmint.com/legal">
+                <h3>Community RSU</h3>
+              </a>
+              <h3>
+                - equity securities for your community
+              </h3>
+              <h3 class="italics"> (liquidity pool) </h3>
+            </ion-card-header>
+          </ion-card>
+          <ion-card>
+            <ion-card-header class="ion-text-start">
+              <a href="https://www.fairmint.com/legal">
+                <h3>Community Options</h3>
+              </a>
+              <h3>
+                - tokenized esop
+              </h3>
+              <h3 class="italics"> (liquidity pool) </h3>
             </ion-card-header>
           </ion-card>
           <ion-card>
@@ -123,39 +149,7 @@
               <h3>
                 - futuristic infinite equity financing
               </h3>
-              <h3 class="italics"> (liquidity pool option) </h3>
-            </ion-card-header>
-          </ion-card>
-          <ion-card>
-            <ion-card-header class="ion-text-start">
-              <a href="https://www.fairmint.com">
-                <h3>DAO Safe</h3>
-              </a>
-              <h3>
-                - equity safe w/ warrants for future tokens
-              </h3>
-            </ion-card-header>
-          </ion-card>
-          <ion-card>
-            <ion-card-header class="ion-text-start">
-              <a href="https://www.fairmint.com">
-                <h3>Web3 RSU</h3>
-              </a>
-              <h3>
-                - equity for community service providers
-              </h3>
-              <h3 class="italics"> (liquidity pool option) </h3>
-            </ion-card-header>
-          </ion-card>
-          <ion-card>
-            <ion-card-header class="ion-text-start">
-              <a href="https://www.fairmint.com">
-                <h3>Web3 Options</h3>
-              </a>
-              <h3>
-                - tokenized esop
-              </h3>
-              <h3 class="italics"> (liquidity pool option) </h3>
+              <h3 class="italics"> (liquidity pool) </h3>
             </ion-card-header>
           </ion-card>
         </ion-col>
@@ -204,10 +198,10 @@
         </ion-col>
       </ion-row>
       <ion-row *ngIf="chosenSegment === 'twitter'">
-        <ion-col size="12" size-sm="8" offset-sm="2">
+        <ion-col size="12" size-xl="4" offset-xl="4">
           <ion-row class="ion-justify-content-center ion-align-items-center padRight">
-            <ion-img class="follow" (click)="follow()" src="assets/twitter.png"></ion-img>
-            <ion-button mode="ios" (click)="follow()">Follow @ericprestonETH</ion-button>
+            <ion-img class="social" (click)="follow()" src="assets/twitter.png"></ion-img>
+            <ion-button size="large" mode="ios" (click)="follow()">Follow @ericprestonETH</ion-button>
           </ion-row>
           <br>
           <ngx-twitter-timeline
@@ -222,3 +216,6 @@
   </ion-row>
 </ion-grid>
 </ion-content>
+<br>
+<br>
+<br>
