@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ethers } from 'ethers';
+import { AnalyticsService } from '../analytics.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomePage {
   provider = new ethers.providers.AlchemyProvider('kovan', 'YmeZsqpToFAPipiEZhCItRKfxYcqGhFk');
   // day = true;
 
-  constructor() {
+  constructor(private analytics: AnalyticsService) {
     const provider = new ethers.providers.JsonRpcProvider();
     const signer = provider.getSigner();
     // this.getCrypto();
@@ -46,6 +47,10 @@ export class HomePage {
 
   async getCrypto() {
    //need ABI
+  }
+
+  test() {
+    this.analytics.test();
   }
 
 }

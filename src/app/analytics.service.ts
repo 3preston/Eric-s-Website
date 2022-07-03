@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class AnalyticsService {
 
-  constructor(public analytics: AngularFireAnalytics) {}
+  constructor(private analytics: AngularFireAnalytics) {}
 
   test() {
     this.analytics.logEvent('tech_segment', { test: 'test', test2: 'test2' });
