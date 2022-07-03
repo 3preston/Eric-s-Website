@@ -1,3 +1,9 @@
+@media (min-width: 693px) {
+  ion-label {
+    font-size: 222%;
+  }
+}
+
 ion-card {
   border-radius: 33px 33px 33px 33px;
   margin-bottom: 22px;
@@ -25,21 +31,17 @@ ion-avatar {
   height: calc(10% + 55px);
 }
 
-ion-label {
-  font-size: 222%;
-}
-
 h1 {
-  font-size: 333%;
+  font-size: calc(333% - 10px);
 }
 
 h3 {
   display: inline;
-  font-size: 333%;
+  font-size: calc(333% - 10px);
 }
 
 h4 {
-  font-size: 200%;
+  font-size: calc(222% - 10px);
 }
 
 h5 {
@@ -56,8 +58,13 @@ h5 {
 }
 
 .social {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
+}
+
+.socialSmall {
+  width: 30px;
+  height: 30px;
 }
 
 .fairmint {
@@ -84,10 +91,12 @@ h5 {
 }
 
 .ktchn {
-  height: 75px;
+  height: 50%;
+  width: 50%;
 }
 
 .noPadBottom {
-  margin-top: 0px;
+  // margin-top: 0px;
   margin-bottom: 0px;
+  padding-bottom: 0px;
 }
