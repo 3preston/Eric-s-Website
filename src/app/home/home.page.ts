@@ -53,4 +53,8 @@ export class HomePage {
     this.analytics.test();
   }
 
+  email() {
+   window.location.href = "mailto:eric@fairmint.co?subject=Website Contact - &body=Hello Eric,"; 
+  }
+
 }
