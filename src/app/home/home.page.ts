@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { ToastController } from '@ionic/angular';
 import { ethers } from 'ethers';
+import { format } from 'path';
 import { AnalyticsService } from '../analytics.service';
 
 @Component({
@@ -14,7 +17,10 @@ export class HomePage {
   provider = new ethers.providers.AlchemyProvider('kovan', 'YmeZsqpToFAPipiEZhCItRKfxYcqGhFk');
   // day = true;
 
-  constructor(private analytics: AnalyticsService) {
+  constructor(private analytics: AnalyticsService,
+              private firestore: AngularFirestore,
+              private toast: ToastController) {
+
     const provider = new ethers.providers.JsonRpcProvider();
     const signer = provider.getSigner();
     // this.getCrypto();
@@ -55,6 +61,27 @@ export class HomePage {
 
   email() {
    window.location.href = "mailto:eric@fairmint.co?subject=Website Contact - &body=Hello Eric,"; 
+  }
+
+  contactSubmit(form: any) {
+    const contact = {
+      email: form.value.email,
+      subject: form.value.subject,
+      message: form.value.message,
+      date: new Date()
+    }
+    console.log(contact);
+    this.firestore.collection('contact').add(contact).then(() => {
+      const toast: any = this.toast.create({
+        header: 'Message Recieved!',
+        message: 'Watch Out For a Reply',
+        duration: 5500,
+        position: 'top',
+        color: 'success'
+      }).then((toastEl) => {
+        toastEl.present();
+      });
+    });
   }
 
 }

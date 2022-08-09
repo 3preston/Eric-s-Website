@@ -10,8 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
-import { provideFirebaseApp } from '@angular/fire/app';
-import { initializeApp } from 'firebase/app';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 
@@ -22,9 +21,9 @@ import { initializeApp } from 'firebase/app';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAnalyticsModule
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
