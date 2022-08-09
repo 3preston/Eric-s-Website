@@ -27,4 +27,13 @@ export class AnalyticsService {
     });
   }
 
+  socialClicked(socialClicked: any) {
+    FirebaseAnalytics.logEvent({
+      name: 'social_clicked',
+      params: {
+        social_clicked: socialClicked
+      }
+    });
+  }
+
 }

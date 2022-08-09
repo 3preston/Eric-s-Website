@@ -31,21 +31,18 @@
         <a href="https://www.fairmint.com">
           <h4 class="padRight">@Fairmint</h4>
         </a>
-        <!-- <a href="https://www.fairmint.com">
-          <ion-img class="socialSmall" src="assets/fairmint.png"></ion-img>
-        </a> -->
       </ion-row>
       <ion-row class="ion-justify-content-center ion-align-items-center">
-        <a href="https://twitter.com/ericprestonETH" class="padRight">
+        <a href="https://twitter.com/ericprestonETH" class="padRight" (click)="analyticsSocial('twitter')">
           <ion-img class="social padRight" src="assets/twitter.png"></ion-img>
         </a>
-        <a href="https://www.linkedin.com/in/ericpreston37/" class="padRight">
+        <a href="https://www.linkedin.com/in/ericpreston37/" class="padRight" (click)="analyticsSocial('linkedin')">
           <ion-img class="social" src="assets/linkedin.png"></ion-img>
         </a>
-        <a href="https://github.com/3preston" class="padRight">
+        <a href="https://github.com/3preston" class="padRight" (click)="analyticsSocial('github')">
           <ion-img class="social padRight" src="assets/github.png"></ion-img>
         </a>
-        <a>
+        <a (click)="analyticsSocial('email')">
           <span (click)="email()" class="email">📧</span>
         </a>
       </ion-row>
@@ -62,13 +59,13 @@
       <ion-row>
         <ion-col size="12" size-xl="8" offset-xl="2">
           <ion-segment mode="ios" value="web3" (ionChange)="segmentChange($event)">
-            <ion-segment-button value="web3" (click)="segmentAnalytics('web3')">
+            <ion-segment-button value="web3" (click)="analyticsSegment('web3')">
               <ion-label>🚀 web3</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="tech" (click)="segmentAnalytics('tech')">
+            <ion-segment-button value="tech" (click)="analyticsSegment('tech')">
               <ion-label>👨🏼‍💻 tech</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="twitter" (click)="segmentAnalytics('twitter')">
+            <ion-segment-button value="twitter" (click)="analyticsSegment('twitter')">
               <ion-row class="ion-align-items-center">
                 <ion-img class="socialSmall padRight" (click)="follow()" src="assets/twitter.png"></ion-img>
                 <ion-label>twitter</ion-label>
