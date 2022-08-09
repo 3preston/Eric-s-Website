@@ -6,6 +6,7 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { NgxTwitterWidgetsModule } from 'ngx-twitter-widgets';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NgxTwitterWidgetsModule } from 'ngx-twitter-widgets';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    NgxTwitterWidgetsModule
+    NgxTwitterWidgetsModule,
+    AngularFireAnalyticsModule
   ],
   declarations: [HomePage]
 })

@@ -59,7 +59,6 @@ export class HomePage {
   // https://docs.alchemy.com/alchemy/apis/ethereum
   // https://www.youtube.com/watch?v=cqdAQK7WOlE
   // https://www.joshmorony.com/building-a-cryptocurrency-price-tracker-pwa-in-ionic/
-
   //
 
 }
