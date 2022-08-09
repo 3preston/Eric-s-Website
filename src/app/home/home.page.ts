@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { NgForm } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 import { ethers } from 'ethers';
 import { format } from 'path';
@@ -63,14 +64,13 @@ export class HomePage {
    window.location.href = "mailto:eric@fairmint.co?subject=Website Contact - &body=Hello Eric,"; 
   }
 
-  contactSubmit(form: any) {
+  contactSubmit(form: NgForm) {
     const contact = {
       email: form.value.email,
       subject: form.value.subject,
       message: form.value.message,
       date: new Date()
     }
-    console.log(contact);
     this.firestore.collection('contact').add(contact).then(() => {
       const toast: any = this.toast.create({
         header: 'Message Recieved!',

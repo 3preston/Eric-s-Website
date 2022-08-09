@@ -10,13 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
-<<<<<<< HEAD
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-=======
-import { provideFirebaseApp } from '@angular/fire/app';
-import { initializeApp } from 'firebase/app';
-import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
->>>>>>> 0d34f9c75cb703554c35459d725fdc8c3178f208
+
 
 
 
@@ -29,13 +24,9 @@ import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule,
-<<<<<<< HEAD
     AngularFirestoreModule,
-=======
-    provideAnalytics(() => getAnalytics())
->>>>>>> 0d34f9c75cb703554c35459d725fdc8c3178f208
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, ScreenTrackingService,UserTrackingService],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
