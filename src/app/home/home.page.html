@@ -62,13 +62,13 @@
       <ion-row>
         <ion-col size="12" size-xl="8" offset-xl="2">
           <ion-segment mode="ios" value="web3" (ionChange)="segmentChange($event)">
-            <ion-segment-button value="web3">
+            <ion-segment-button value="web3" (click)="segmentAnalytics('web3')">
               <ion-label>🚀 web3</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="tech" (click)="test()">
+            <ion-segment-button value="tech" (click)="segmentAnalytics('tech')">
               <ion-label>👨🏼‍💻 tech</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="twitter">
+            <ion-segment-button value="twitter" (click)="segmentAnalytics('twitter')">
               <ion-row class="ion-align-items-center">
                 <ion-img class="socialSmall padRight" (click)="follow()" src="assets/twitter.png"></ion-img>
                 <ion-label>twitter</ion-label>

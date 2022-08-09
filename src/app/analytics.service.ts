@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { FirebaseAnalytics } from '@capacitor-community/firebase-analytics';
 import { environment } from 'src/environments/environment.prod';
 import { Device } from '@capacitor/device';
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from "firebase/analytics";
 
 @Injectable({
   providedIn: 'root'
@@ -17,22 +15,16 @@ export class AnalyticsService {
   async initFB() {
     if ((await Device.getInfo()).platform == 'web') {
       FirebaseAnalytics.initializeFirebase(environment.firebaseConfig);
-      console.log('initran!');
     }
-    
-
-    // const app = initializeApp(environment.firebaseConfig);
-    // const analytics = getAnalytics(app);
   }
   
-  test() {
+  segmentChanged(segment: any) {
     FirebaseAnalytics.logEvent({
-      name: 'test',
+      name: 'segment_changed',
       params: {
-        time: 'test'
+        segment: segment
       }
     });
-    console.log('runnign');
   }
 
 }

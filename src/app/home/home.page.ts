@@ -49,8 +49,8 @@ export class HomePage {
     });
   }
 
-  test() {
-    this.analytics.test();
+  segmentAnalytics(segment: any) {
+    this.analytics.segmentChanged(segment);
   }
 
   //crypto not yet working see following websites///
