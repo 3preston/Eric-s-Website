@@ -9,7 +9,7 @@ import { Device } from '@capacitor/device';
 export class AnalyticsService {
 
   constructor() {
-    FirebaseAnalytics.initializeFirebase(environment.firebaseConfig);
+    FirebaseAnalytics.initializeFirebase(environment.firebase);
   }
   
   segmentChanged(segment: any) {
