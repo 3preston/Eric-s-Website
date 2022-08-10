@@ -9,13 +9,7 @@ import { Device } from '@capacitor/device';
 export class AnalyticsService {
 
   constructor() {
-    this.initFB();
-  }
-
-  async initFB() {
-    if ((await Device.getInfo()).platform == 'web') {
-      FirebaseAnalytics.initializeFirebase(environment.firebaseConfig);
-    }
+    FirebaseAnalytics.initializeFirebase(environment.firebaseConfig);
   }
   
   segmentChanged(segment: any) {
@@ -33,6 +27,38 @@ export class AnalyticsService {
       params: {
         social_clicked: socialClicked
       }
+    });
+  }
+
+  fairmintClick(baseOrLegal: any) {
+    FirebaseAnalytics.logEvent({
+      name: 'fairmint_clicked',
+      params: {
+        base_or_legal: baseOrLegal
+      }
+    });
+  }
+
+  techClicked(techClicked: any) {
+    FirebaseAnalytics.logEvent({
+      name: 'tech_clicked',
+      params: {
+        tech_clicked: techClicked
+      }
+    });
+  }
+  
+  twitterFollow() {
+    FirebaseAnalytics.logEvent({
+      name: 'twitter_follow',
+      params: {}
+    });
+  }
+
+  contactFormUsed() {
+    FirebaseAnalytics.logEvent({
+      name: 'contact_form',
+      params: {}
     });
   }
 

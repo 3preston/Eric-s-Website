@@ -57,6 +57,22 @@ export class HomePage {
     this.analytics.socialClicked(socialClicked);
   }
 
+  analyticsFairmint(baseOrLegal: any) {
+    this.analytics.fairmintClick(baseOrLegal);
+  }
+
+  analyticsTechClicked(tech: any) {
+    this.analytics.techClicked(tech);
+  }
+
+  analyticsTwitterFollow() {
+    this.analytics.twitterFollow();
+  }
+
+  analyticsContact() {
+    this.analytics.contactFormUsed();
+  }
+
   //crypto not yet working see following websites///
   // https://docs.ethers.io/v5/api/providers/api-providers/
   // https://blog.chain.link/how-to-display-crypto-and-fiat-prices-on-a-frontend/
