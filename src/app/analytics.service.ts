@@ -11,7 +11,7 @@ export class AnalyticsService {
   constructor() {
     FirebaseAnalytics.initializeFirebase(environment.firebase);
   }
-  
+
   segmentChanged(segment: any) {
     FirebaseAnalytics.logEvent({
       name: 'segment_changed',
@@ -47,17 +47,10 @@ export class AnalyticsService {
       }
     });
   }
-  
+
   twitterFollow() {
     FirebaseAnalytics.logEvent({
       name: 'twitter_follow',
-      params: {}
-    });
-  }
-
-  contactFormUsed() {
-    FirebaseAnalytics.logEvent({
-      name: 'contact_form',
       params: {}
     });
   }

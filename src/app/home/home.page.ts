@@ -14,19 +14,19 @@ export class HomePage {
   chosenSegment = 'web3';
 
   constructor(private analytics: AnalyticsService,
-              private firestore: AngularFirestore,
-              private toast: ToastController) {}
+    private firestore: AngularFirestore,
+    private toast: ToastController) { }
 
   segmentChange(chosenSegment: any) {
     this.chosenSegment = chosenSegment.detail.value;
   }
 
   follow() {
-    window.open("https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A8100%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5EericprestonETH&region=follow_link&screen_name=ericprestonETH") 
+    window.open("https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A8100%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5EericprestonETH&region=follow_link&screen_name=ericprestonETH")
   }
 
   email() {
-   window.location.href = "mailto:eric@fairmint.co?subject=Website Contact - &body=Hello Eric,"; 
+    window.location.href = "mailto:eric@fairmint.co?subject=Website Contact - &body=Hello Eric,";
   }
 
   contactSubmit(form: NgForm) {
@@ -67,10 +67,6 @@ export class HomePage {
 
   analyticsTwitterFollow() {
     this.analytics.twitterFollow();
-  }
-
-  analyticsContact() {
-    this.analytics.contactFormUsed();
   }
 
   //crypto not yet working see following websites///

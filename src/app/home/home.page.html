@@ -237,33 +237,6 @@
     </ion-row>
   </ion-grid>
   <br>
-  <form #f="ngForm" (ngSubmit)="contactSubmit(f)">
-    <ion-grid>
-      <ion-row class="ion-justify-content-center">
-        <ion-col class="ion-text-center" size-sm="5">
-          <h3 class="underline">Contact Me:</h3>
-          <br>
-          <br>
-          <ion-item>
-            <ion-label position="floating">Email:</ion-label>
-            <ion-input inputmode="email" type="email" name="email" required ngModel email #emailCtrl="ngModel">
-            </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Subject:</ion-label>
-            <ion-input inputmode="text" type="text" name="subject" required ngModel #subjectCtrl="ngModel"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label position="floating">Message:</ion-label>
-            <ion-textarea inputmode="text" type="text" name="message" required ngModel #messageCtrl="ngModel">
-            </ion-textarea>
-          </ion-item>
-          <br>
-          <ion-button type="submit" color="danger" (click)="analyticsContact()">Submit</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </form>
 </ion-content>
 <br>
 <br>
