@@ -194,7 +194,7 @@
             <br>
             <br>
             <br>
-            <ion-row class="ion-text-center">
+            <ion-row class="ion-text-center ion-justify-content-center">
               <h4>Favorite Technologies = Typescript & Javascript, Python, Solidity, Angular, Ionic, Capacitor,
                 Firebase, Algolia, IPFS, ENS, HTML, SCSS, Wix</h4>
             </ion-row>
@@ -211,8 +211,18 @@
             </ion-row>
             <br>
             <ngx-twitter-timeline style="width: 250px;" [source]="{sourceType: 'profile', screenName: 'ericprestonETH'}"
-              [options]="{height: '4500'}" (onLoad)="onLoad($event)">
+              [options]="{height: '4500'}" (onLoad)="onLoad()">
             </ngx-twitter-timeline>
+            <ion-row *ngIf="twitterLoading" class="ion-justify-content-center ion-text-center">
+              <ion-col>
+                <ion-row class="ion-justify-content-center ion-text-center">
+                  <ion-spinner color="success"></ion-spinner>
+                </ion-row>
+                <ion-row class="ion-justify-content-center ion-text-center">
+                  <h1>🐦 ☎️ Calling Elon...</h1>
+                </ion-row>
+              </ion-col>
+            </ion-row>
             <br>
           </ion-col>
         </ion-row>

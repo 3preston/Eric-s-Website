@@ -12,6 +12,7 @@ import { AnalyticsService } from '../analytics.service';
 export class HomePage {
 
   chosenSegment = 'web3';
+  twitterLoading = true;
 
   constructor(private analytics: AnalyticsService,
     private firestore: AngularFirestore,
@@ -26,7 +27,7 @@ export class HomePage {
   }
 
   email() {
-    window.location.href = "mailto:eric@fairmint.co?subject=Website Contact - &body=Hello Eric,";
+    window.location.href = "mailto:prest114@msu.edu?subject=Website Contact - &body=Hello Eric,";
   }
 
   contactSubmit(form: NgForm) {
@@ -57,10 +58,6 @@ export class HomePage {
     this.analytics.socialClicked(socialClicked);
   }
 
-  analyticsFairmint(baseOrLegal: any) {
-    this.analytics.fairmintClick(baseOrLegal);
-  }
-
   analyticsTechClicked(tech: any) {
     this.analytics.techClicked(tech);
   }
@@ -69,12 +66,8 @@ export class HomePage {
     this.analytics.twitterFollow();
   }
 
-  //crypto not yet working see following websites///
-  // https://docs.ethers.io/v5/api/providers/api-providers/
-  // https://blog.chain.link/how-to-display-crypto-and-fiat-prices-on-a-frontend/
-  // https://docs.alchemy.com/alchemy/apis/ethereum
-  // https://www.youtube.com/watch?v=cqdAQK7WOlE
-  // https://www.joshmorony.com/building-a-cryptocurrency-price-tracker-pwa-in-ionic/
-  //
+  onLoad() {
+    this.twitterLoading = false;
+  }
 
 }

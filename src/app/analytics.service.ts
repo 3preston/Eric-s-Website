@@ -30,15 +30,6 @@ export class AnalyticsService {
     });
   }
 
-  fairmintClick(baseOrLegal: any) {
-    FirebaseAnalytics.logEvent({
-      name: 'fairmint_clicked',
-      params: {
-        base_or_legal: baseOrLegal
-      }
-    });
-  }
-
   techClicked(techClicked: any) {
     FirebaseAnalytics.logEvent({
       name: 'tech_clicked',
