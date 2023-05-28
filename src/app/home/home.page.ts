@@ -1,22 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { NgForm } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 import { AnalyticsService } from '../analytics.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  chosenSegment = 'web3';
-  twitterLoading = true;
+  chosenSegment: string = 'web3';
+  twitterLoading: boolean = true;
+  cryptoPrices = {};
 
   constructor(private analytics: AnalyticsService,
     private firestore: AngularFirestore,
+    private http: HttpClient,
     private toast: ToastController) { }
+
+  ngOnInit() {
+    this.http.get('https://api.coingecko.com/api/v3/simple/price?ids=ethereum,optimism,bitcoin,cosmos&vs_currencies=usd')
+      .subscribe((response: any) => {
+        const cryptoPrices = {
+          'eth': response.ethereum.usd,
+          'op': response.optimism.usd,
+          'btc': response.bitcoin.usd,
+          'atom': response.cosmos.usd,
+        };
+        this.cryptoPrices = cryptoPrices;
+        console.log(this.cryptoPrices);
+      });
+  }
 
   segmentChange(chosenSegment: any) {
     this.chosenSegment = chosenSegment.detail.value;

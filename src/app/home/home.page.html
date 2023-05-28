@@ -1,7 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-row class="ion-align-items-center">
-      <h1>{{crypto}}</h1>
+    <ion-row class="ion-text-center">
+      <ion-col>
+        <span>BTC: ${{cryptoPrices?.btc}}</span>
+      </ion-col>
+      <ion-col>
+        <span>ETH: ${{cryptoPrices?.eth}}</span>
+      </ion-col>
+      <ion-col>
+        <span>ATOM: ${{cryptoPrices?.atom}}</span>
+      </ion-col>
+      <ion-col>
+        <span>OP: ${{cryptoPrices?.op}}</span>
+      </ion-col>
     </ion-row>
   </ion-toolbar>
 </ion-header>
