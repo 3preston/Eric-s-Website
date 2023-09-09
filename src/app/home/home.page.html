@@ -2,16 +2,13 @@
   <ion-toolbar>
     <ion-row class="ion-text-center">
       <ion-col>
-        <span>BTC: ${{cryptoPrices?.btc}}</span>
+        <span>$Bitcoin: ${{cryptoPrices?.btc}}</span>
       </ion-col>
       <ion-col>
-        <span>ETH: ${{cryptoPrices?.eth}}</span>
+        <span>$Ethereum: ${{cryptoPrices?.eth}}</span>
       </ion-col>
       <ion-col>
-        <span>ATOM: ${{cryptoPrices?.atom}}</span>
-      </ion-col>
-      <ion-col>
-        <span>OP: ${{cryptoPrices?.op}}</span>
+        <span>$Atom: ${{cryptoPrices?.atom}}</span>
       </ion-col>
     </ion-row>
   </ion-toolbar>
@@ -77,9 +74,9 @@
                 <ion-label>👨🏼‍💻 tech</ion-label>
               </ion-segment-button>
               <ion-segment-button value="twitter" (click)="analyticsSegment('twitter')">
-                <ion-row class="ion-align-items-center">
+                <ion-row class="ion-align-items-center ion-justify-content-center">
                   <ion-img class="socialSmall padRight" (click)="follow()" src="assets/twitter.png"></ion-img>
-                  <ion-label>twitter</ion-label>
+                  <ion-label>twitter (X)</ion-label>
                 </ion-row>
               </ion-segment-button>
             </ion-segment>
@@ -95,12 +92,17 @@
             <br>
             <ion-card>
               <ion-card-header class="ion-text-start">
-                <h3 class="blue">Entity selection & formation</h3>
+                <h3 class="blue">Technology transactions</h3>
               </ion-card-header>
             </ion-card>
             <ion-card>
               <ion-card-header class="ion-text-start">
-                <h3 class="blue">Corporate & LLC governance</h3>
+                <h3 class="blue">Regulatory compliance - financial, data & privacy, employment, etc.</h3>
+              </ion-card-header>
+            </ion-card>
+            <ion-card>
+              <ion-card-header class="ion-text-start">
+                <h3 class="blue">Intellecutal property creation, registration & protection</h3>
               </ion-card-header>
             </ion-card>
             <ion-card>
@@ -110,32 +112,24 @@
             </ion-card>
             <ion-card>
               <ion-card-header class="ion-text-start">
-                <h3 class="blue">Securities regulations & exemptions</h3>
+                <h3 class="blue">Securities regulations & exemptions, equity compensation, & offering documents</h3>
               </ion-card-header>
             </ion-card>
             <ion-card>
               <ion-card-header class="ion-text-start">
-                <h3 class="blue">Intellecutal property creation, registration, and protection</h3>
+                <h3 class="blue">Structuring & managing key relationships, boards, employees, independent contractors,
+                  etc.</h3>
               </ion-card-header>
             </ion-card>
             <ion-card>
               <ion-card-header class="ion-text-start">
-                <h3 class="blue">Regulatory compliance - financial, privacy, HR/employment, tech, etc.</h3>
+                <h3 class="blue">Entity selection, formation & management. Corporate & LLC governance</h3>
               </ion-card-header>
             </ion-card>
+
             <ion-card>
               <ion-card-header class="ion-text-start">
-                <h3 class="blue">Structuring & managing key relationships and boards</h3>
-              </ion-card-header>
-            </ion-card>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Employees, independent contractors, and equity compensation</h3>
-              </ion-card-header>
-            </ion-card>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Creation, use, and trading of digital assets & decentralized technologies</h3>
+                <h3 class="blue">Digital assets, blockchains & decentralized networks</h3>
               </ion-card-header>
             </ion-card>
             <ion-card>
