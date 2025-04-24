@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 import { AnalyticsService } from '../analytics.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomePage implements OnInit {
   constructor(private analytics: AnalyticsService,
     private firestore: AngularFirestore,
     private http: HttpClient,
+    private router: Router,
     private toast: ToastController) { }
 
   ngOnInit() {
@@ -35,36 +37,43 @@ export class HomePage implements OnInit {
       });
   }
 
-  segmentChange(chosenSegment: any) {
-    this.chosenSegment = chosenSegment.detail.value;
-  }
-
-  follow() {
-    window.open("https://twitter.com/intent/follow?original_referer=http%3A%2F%2Flocalhost%3A8100%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5EericprestonETH&region=follow_link&screen_name=ericprestonETH")
-  }
-
   email() {
     window.location.href = "mailto:prest114@msu.edu?subject=Website Contact - &body=Hello Eric,";
   }
 
-  contactSubmit(form: NgForm) {
-    const contact = {
-      email: form.value.email,
-      subject: form.value.subject,
-      message: form.value.message,
-      date: new Date()
-    }
-    this.firestore.collection('contact').add(contact).then(() => {
-      const toast: any = this.toast.create({
-        header: 'Message Recieved!',
+  async contactSubmit(form: NgForm) {
+    try {
+      const contact = {
+        email: form.value.email,
+        subject: form.value.subject,
+        message: form.value.message,
+        date: new Date()
+      };
+      
+      await this.firestore.collection('contact').add(contact);
+      
+      const toast = await this.toast.create({
+        header: 'Message Received!',
         message: 'Watch Out For a Reply',
         duration: 5500,
         position: 'top',
         color: 'success'
-      }).then((toastEl) => {
-        toastEl.present();
       });
-    });
+      
+      await toast.present();
+      form.resetForm();
+      
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      const toast = await this.toast.create({
+        header: 'Error',
+        message: 'Failed to send message. Please try again later or try email instead.',
+        duration: 3000,
+        position: 'middle',
+        color: 'danger'
+      });
+      await toast.present();
+    }
   }
 
   analyticsSegment(segment: any) {
@@ -85,6 +94,10 @@ export class HomePage implements OnInit {
 
   onLoad() {
     this.twitterLoading = false;
+  }
+
+  privacy() {
+    this.router.navigate(['/privacy']);
   }
 
 }

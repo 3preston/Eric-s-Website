@@ -19,24 +19,170 @@
     <ion-row>
       <ion-col>
         <br>
-        <ion-row class="ion-justify-content-center ion-align-items-center">
-          <ion-avatar>
-            <ion-img src="assets/eric.jpeg"></ion-img>
-          </ion-avatar>
-          <h1 class="ion-padding-start ion-padding-end">+</h1>
-          <ion-avatar>
-            <ion-img src="assets/Cypherpunk_zero_3960.png"></ion-img>
-          </ion-avatar>
+        <div class="container">
+          <br>
+          <ion-row class="ion-justify-content-center ion-align-items-center">
+            <ion-avatar>
+              <ion-img src="assets/Cypherpunk_zero_3960.png"></ion-img>
+            </ion-avatar>
+          </ion-row>
+          <ion-row class="ion-justify-content-center noPadBottom">
+            <h1 class="noPadBottom name">Eric Preston</h1>
+          </ion-row>
+          <ion-row class="ion-justify-content-center noPadBottom">
+            <h5 class="noPadBottom">(ericpreston.eth)</h5>
+          </ion-row>
+          <ion-row>
+            <ion-col size="10" offset="1" size-lg="6" offset-lg="3" class="ion-text-center">
+              <!-- <span>🌞⛵️🏖🏔🚴🏻‍♂️⛳️🏒🏎👟📚🧘🏼‍♂️📈🍦🫖💎</span> -->
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-justify-content-center ion-align-items-center">
+            <a href="https://twitter.com/ericprestonETH" (click)="analyticsSocial('twitter')">
+              <ion-img class="social padRight" src="assets/X.png"></ion-img>
+            </a>
+            <a href="https://www.linkedin.com/in/ericpreston37/" (click)="analyticsSocial('linkedin')">
+              <ion-img class="social padRight" src="assets/linkedin.png"></ion-img>
+            </a>
+            <a href="https://github.com/3preston" (click)="analyticsSocial('github')">
+              <ion-img class="social padRight" src="assets/github.png"></ion-img>
+            </a>
+            <a href="https://substack.com/@ericpreston" (click)="analyticsSocial('substack')">
+              <ion-img class="social padRight" src="assets/substack.png"></ion-img>
+            </a>
+            <a (click)="analyticsSocial('email')">
+              <span (click)="email()" class="email">📧</span>
+            </a>
+          </ion-row>
+          <br>
+        </div>
+        <ion-row class="ion-justify-content-center ion-text-center ion-align-items-center">
+          <ion-col size="12">
+            <ion-card style="background-color: var(--ion-color-tertiary)">
+              <ion-card-header style="text-decoration: underline; text-decoration-thickness: 3px; font-size: 25px; color: var(--ion-color-primary-contrast); font-weight: bolder;">About Me</ion-card-header>
+              <ion-card-content style="color: var(--ion-color-primary-contrast); font-size: 18px;">Hello, I am a U.S. based attorney specializing in business law, finance, tech and crypto. I am also an MBA and certified information privacy professional (CIPP/US).
+                I enjoy software, AI, and product development, and have a passion for startups, founders and innovation.
+              </ion-card-content>
+              <ion-card-content style="color: var(--ion-color-primary-contrast); font-size: 18px;">My experience includes leading domestic and international transactions, financing agreements, regulatory compliance,
+                product development, intellectual property, M&A, licensing and more.
+              </ion-card-content>
+              <ion-card-content style="color: var(--ion-color-primary-contrast); font-size: 18px;">I am currently a Senior Associate Attorney at Montague Law, PLLC, a boutique law firm 
+                specializing in business law, finance, tech and crypto. You can learn more about my practice by clicking: <a href="https://montague.law" style="color: var(--ion-color-primary-contrast)">here</a>.
+              </ion-card-content>
+              <br>
+            </ion-card>
+          </ion-col>
         </ion-row>
-        <ion-row class="ion-justify-content-center noPadBottom">
-          <h1 class="noPadBottom">Eric Preston</h1>
+        <ion-row class="ion-justify-content-center ion-text-center ion-align-items-center">
+          <ion-col size="12">
+            <ion-card style="background-color: var(--ion-color-primary-contrast)">
+              <ion-card-header style="text-decoration: underline; text-decoration-thickness: 3px; font-size: 25px; color: var(--ion-color-light); font-weight: bolder;">Selected Projects</ion-card-header>
+              <ion-col class="ion-text-center" size-xs="12" size-sm="6">
+                <a href="https://ericpreston.substack.com/p/verifying-accredited-investor-status" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                  <ion-card button>
+                    <ion-card-header>
+                      <ion-card-title> 
+                        <span class="blog-title">Article:</span> Verifying Accredited Investor Status Just Got Easier</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                      New SEC no-action letter for verifying accredited investors under Rule 506(c)
+                    </ion-card-content>
+                    <ion-row class="ion-justify-content-center">
+                      <span class="blog-link">(Click to read)</span>
+                    </ion-row>
+                    <br>
+                  </ion-card>
+                </a>
+              </ion-col>
+              <ion-col class="ion-text-center" size-xs="12" size-sm="6">
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-title>SAFE Conversion Calculator</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <a href="https://www.safeconversioncalculator.com" target="_blank">www.safeconversioncalculator.com (***Coming Soon***)</a>
+                  </ion-card-content>
+                </ion-card>
+              </ion-col>
+              <br>
+            </ion-card>
+            <ion-row class="ion-justify-content-center ion-text-center ion-align-items-center">
+              <span>Find more online at: </span>
+              <a href="https://twitter.com/ericprestonETH" (click)="analyticsSocial('twitter')">
+                <ion-img class="social padRight" src="assets/X.png"></ion-img>
+              </a>
+              <a href="https://www.linkedin.com/in/ericpreston37/" (click)="analyticsSocial('linkedin')">
+                <ion-img class="social padRight" src="assets/linkedin.png"></ion-img>
+              </a>
+              <a href="https://github.com/3preston" (click)="analyticsSocial('github')">
+                <ion-img class="social padRight" src="assets/github.png"></ion-img>
+              </a>
+              <a href="https://substack.com/@ericpreston" (click)="analyticsSocial('substack')">
+                <ion-img class="social padRight" src="assets/substack.png"></ion-img>
+              </a>
+            </ion-row>
+          </ion-col>
         </ion-row>
-        <ion-row class="ion-justify-content-center noPadBottom">
-          <h5 class="noPadBottom">(ericpreston.eth)</h5>
-        </ion-row>
-        <ion-row class="ion-justify-content-center ion-align-items-center">
+        <br>
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col size-xs="12" class="ion-text-center">
+              <ion-card class="contact-card" id="contact-section">
+                <ion-card-header>
+                  <ion-card-title class="about-header">Contact Me</ion-card-title>
+                </ion-card-header>
+                <ion-row class="ion-justify-content-center">
+                </ion-row>
+                <br>
+                <ion-row (click)="email()" class="ion-justify-content-center ion-text-center ion-align-items-center" style="cursor: pointer;">
+                  <span class="contact-header" style="padding-right: 5px;">Click to Email</span>
+                  <span class="email2">📧</span>
+                </ion-row>
+                <br>
+                  <form #f="ngForm" (ngSubmit)="contactSubmit(f)">
+                    <ion-grid>
+                      <ion-row class="ion-justify-content-center">
+                        <ion-col class="ion-text-center" size-xs="12" size-sm="8">
+                          <span class="contact-header">Send a Message:</span>
+                          <br>
+                          <br>
+                          <ion-item>
+                            <ion-label position="inline" style="padding-right: 10px;">Email:</ion-label>
+                            <ion-input inputmode="email" type="email" name="email" required ngModel #emailCtrl="ngModel">
+                            </ion-input>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label position="inline" style="padding-right: 10px;">Subject:</ion-label>
+                            <ion-input inputmode="text" type="text" name="subject" required ngModel #subjectCtrl="ngModel"></ion-input>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label position="inline" style="padding-right: 10px;">Message:</ion-label>
+                            <ion-input inputmode="text" type="text" name="message" required ngModel #messageCtrl="ngModel"></ion-input>
+                          </ion-item>
+                          <br>
+                          <ion-button type="submit" color="success">Submit</ion-button>
+                        </ion-col>
+                      </ion-row>
+                    </ion-grid>
+                  </form>
+                <br>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br>
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col class="ion-text-start" size-xs="4">
+        <span style="font-style: italic;">© Eric Preston. All rights reserved.</span>
+      </ion-col>
+      <ion-col class="ion-align-items-center" size-xs="4">
+        <ion-row class="ion-justify-content-center">
           <a href="https://twitter.com/ericprestonETH" (click)="analyticsSocial('twitter')">
-            <ion-img class="social padRight" src="assets/twitter.png"></ion-img>
+            <ion-img class="social padRight" src="assets/X.png"></ion-img>
           </a>
           <a href="https://www.linkedin.com/in/ericpreston37/" (click)="analyticsSocial('linkedin')">
             <ion-img class="social padRight" src="assets/linkedin.png"></ion-img>
@@ -44,9 +190,6 @@
           <a href="https://github.com/3preston" (click)="analyticsSocial('github')">
             <ion-img class="social padRight" src="assets/github.png"></ion-img>
           </a>
-          <!-- <a href="https://opensea.io/ericpreston.eth" (click)="analyticsSocial('opensea')">
-            <ion-img class="social padRight" src="assets/eth.png"></ion-img>
-          </a> -->
           <a href="https://substack.com/@ericpreston" (click)="analyticsSocial('substack')">
             <ion-img class="social padRight" src="assets/substack.png"></ion-img>
           </a>
@@ -54,185 +197,13 @@
             <span (click)="email()" class="email">📧</span>
           </a>
         </ion-row>
-        <ion-row>
-          <ion-col size="10" offset="1" size-lg="6" offset-lg="3" class="ion-text-center">
-            <h2>
-              Hello, my name is Eric Preston.
-              I am a corporate attorney, finance MBA, and self-taught software engineer.
-              🌞⛵️🏖🏔🚴🏻‍♂️⛳️🏒🏎👟📚🧘🏼‍♂️📈🍦🫖💎
-            </h2>
-          </ion-col>
-        </ion-row>
-        <br>
-        <ion-row>
-          <ion-col size="12" size-xl="8" offset-xl="2">
-            <ion-segment mode="ios" value="web3" (ionChange)="segmentChange($event)">
-              <ion-segment-button value="web3" (click)="analyticsSegment('web3')">
-                <ion-label>🚀 legal</ion-label>
-              </ion-segment-button>
-              <ion-segment-button value="tech" (click)="analyticsSegment('tech')">
-                <ion-label>👨🏼‍💻 tech</ion-label>
-              </ion-segment-button>
-              <!-- <ion-segment-button value="twitter" (click)="analyticsSegment('twitter')">
-                <ion-row class="ion-align-items-center ion-justify-content-center">
-                  <ion-img class="socialSmall padRight" (click)="follow()" src="assets/twitter.png"></ion-img>
-                  <ion-label>twitter (X)</ion-label>
-                </ion-row>
-              </ion-segment-button> -->
-            </ion-segment>
-          </ion-col>
-        </ion-row>
-        <br>
-        <ion-row *ngIf="chosenSegment === 'web3'">
-          <ion-col size="12" size-xl="8" offset-xl="2" class="ion-text-center">
-            <br>
-            <h3 class="underline bold">Corporate Attorney</h3>
-            <br>
-            <br>
-            <br>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Technology Transactions - software licensing & development, SAAS & IT
-                  services, partnerships & integrations, etc.</h3>
-              </ion-card-header>
-            </ion-card>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Regulatory Compliance - privacy & cybersecurity, securities & investments, lending,
-                  advertising, artificial intelligence, etc.</h3>
-              </ion-card-header>
-            </ion-card>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Intellecutal Property - creation, licensing, registration & enforcement</h3>
-              </ion-card-header>
-            </ion-card>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Corporate Governance - entity selection, formation & management, corporations & LLCs
-                </h3>
-              </ion-card-header>
-            </ion-card>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Structuring & Managing Key Relationships - boards, executives, employees,
-                  independent contractors, etc.</h3>
-              </ion-card-header>
-            </ion-card>
-            <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Digital assets, blockchains & decentralized networks</h3>
-              </ion-card-header>
-            </ion-card>
-            <!-- <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Venture finance - convertible notes & SAFEs, crowdfunding, valuations, etc.</h3>
-              </ion-card-header>
-            </ion-card> -->
-            <!-- <ion-card>
-              <ion-card-header class="ion-text-start">
-                <h3 class="blue">Securities regulations & exemptions, equity compensation, & offering documents</h3>
-              </ion-card-header>
-            </ion-card> -->
-            <br>
-            <br>
-            <br>
-            <ion-row class="ion-justify-content-center ion-align-items-center ion-text-center">
-              <a href="https://substack.com/@ericpreston" (click)="analyticsTechClicked('substack')">
-                <ion-img class="substack padRight" src="assets/substack.png"></ion-img>
-              </a>
-              <a href="https://substack.com/@ericpreston" (click)="analyticsTechClicked('substack')">
-                <h1 class="padLeft">Eric's Substack</h1>
-              </a>
-            </ion-row>
-            <br>
-            <br>
-            <br>
-          </ion-col>
-        </ion-row>
-        <ion-row *ngIf="chosenSegment === 'tech'">
-          <ion-col size="12" size-sm="8" offset-sm="2">
-            <ion-row class="ion-justify-content-center ion-align-items-center">
-              <a href="https://www.github.com/3preston" (click)="analyticsTechClicked('github')">
-                <ion-img class="substack padRight" src="assets/github.png"></ion-img>
-              </a>
-              <a href="https://www.github.com/3preston" (click)="analyticsTechClicked('github')">
-                <h1 class="padLeft">Eric's Github</h1>
-              </a>
-            </ion-row>
-            <br>
-            <br>
-            <br>
-            <ion-row class="ion-justify-content-center ion-align-items-center ion-text-center">
-              <a href="https://substack.com/@ericpreston" (click)="analyticsTechClicked('substack')">
-                <ion-img class="substack padRight" src="assets/substack.png"></ion-img>
-              </a>
-              <a href="https://substack.com/@ericpreston" (click)="analyticsTechClicked('substack')">
-                <h1 class="padLeft">Eric's Substack</h1>
-              </a>
-            </ion-row>
-            <br>
-            <br>
-            <br>
-            <ion-row class="ion-align-items-center ion-justify-content-center">
-              <ion-img class="ktchn" src="assets/ktchn.png" (click)="analyticsTechClicked('ktchnWeb')"></ion-img>
-            </ion-row>
-            <ion-row class="ion-justify-content-center">
-              <a href="https://www.ktchnonline.com" (click)="analyticsTechClicked('ktchnWeb')">
-                <h4>www.ktchnonline.com</h4>
-              </a>
-            </ion-row>
-            <ion-row class="ion-justify-content-center">
-              <a href="https://apps.apple.com/us/app/ktchn/id1596150696" (click)="analyticsTechClicked('ktchnIOSapp')">
-                <ion-img class="apps" src="assets/apple.png"></ion-img>
-              </a>
-            </ion-row>
-            <ion-row class="ion-justify-content-center">
-              <a href="https://play.google.com/store/apps/details?id=com.ktchnonline"
-                (click)="analyticsTechClicked('ktchnAndroid')">
-                <ion-img class="apps" src="assets/android.png"></ion-img>
-              </a>
-            </ion-row>
-            <br>
-            <br>
-            <br>
-            <ion-row class="ion-text-center ion-justify-content-center">
-              <h4>Favorite Technologies = Typescript & Javascript, Python, Solidity, Angular, Ionic, Capacitor,
-                Firebase, Algolia, IPFS, ENS, HTML, SCSS, Wix</h4>
-            </ion-row>
-            <br>
-            <br>
-          </ion-col>
-        </ion-row>
-        <ion-row *ngIf="chosenSegment === 'twitter'">
-          <ion-col size="12" size-xl="4" offset-xl="4">
-            <ion-row class="ion-justify-content-center ion-align-items-center padRight"
-              (click)="analyticsTwitterFollow()">
-              <ion-img class="social" (click)="follow()" src="assets/twitter.png"></ion-img>
-              <ion-button size="large" mode="ios" (click)="follow()">Follow @ericprestonETH</ion-button>
-            </ion-row>
-            <br>
-            <ngx-twitter-timeline style="width: 250px;" [source]="{sourceType: 'profile', screenName: 'ericprestonETH'}"
-              [options]="{height: '4500'}" (onLoad)="onLoad()">
-            </ngx-twitter-timeline>
-            <ion-row *ngIf="twitterLoading" class="ion-justify-content-center ion-text-center">
-              <ion-col>
-                <ion-row class="ion-justify-content-center ion-text-center">
-                  <ion-spinner color="success"></ion-spinner>
-                </ion-row>
-                <ion-row class="ion-justify-content-center ion-text-center">
-                  <h1>🐦 ☎️ Calling Elon...</h1>
-                </ion-row>
-              </ion-col>
-            </ion-row>
-            <br>
-          </ion-col>
+      </ion-col>
+      <ion-col size-xs="4">
+        <ion-row class="ion-justify-content-end ion-text-center">
+          <span (click)="privacy()" style="cursor: pointer; text-decoration: underline;">Privacy Policy</span>
         </ion-row>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <br>
 </ion-content>
-<br>
-<br>
 <br>
